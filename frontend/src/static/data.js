@@ -220,7 +220,7 @@ export const categoriesData = [
   },
   {
     id: 8,
-    title: "Điện thoại và Máy tính bản",
+    title: "Điện thoại và Máy tính bảng",
     subTitle: "",
     image_Url:
       "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
