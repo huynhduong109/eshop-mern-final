@@ -86,13 +86,13 @@ const ShopInfo = ({ isOwner }) => {
         <div className="py-3 px-4">
            <Link to="/settings">
            <div className={`${styles.button} !w-full !h-[42px] !rounded-[5px]`}>
-            <span className="text-white">Edit Shop</span>
+            <span className="text-white">Sửa hồ sơ</span>
           </div>
            </Link>
           <div className={`${styles.button} !w-full !h-[42px] !rounded-[5px]`}
           onClick={logoutHandler}
           >
-            <span className="text-white">Log Out</span>
+            <span className="text-white">Đăng xuất</span>
           </div>
         </div>
       )}

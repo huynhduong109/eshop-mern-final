@@ -15,23 +15,32 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios
-      .post(
+    try {
+      const response = await axios.post(
         `${server}/user/login-user`,
         {
           email,
           password,
         },
         { withCredentials: true }
-      )
-      .then((res) => {
-        toast.success("Đăng nhập thành công!");
+      );
+
+      const userData = response.data.user;
+      const userRole = userData.role;
+
+      toast.success("Đăng nhập thành công!");
+
+      // Check the role and navigate accordingly
+      if (userRole === "Admin") {
+        navigate("/admin/dashboard");
+      } else {
         navigate("/");
-        window.location.reload(true);
-      })
-      .catch((err) => {
-        toast.error(err.response.data.message);
-      });
+      }
+
+      window.location.reload(true);
+    } catch (err) {
+      toast.error(err.response.data.message);
+    }
   };
 
   return (
